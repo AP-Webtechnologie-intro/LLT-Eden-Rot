@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-     <!-- Required meta tags -->
+<html lang="nl-BE">
+
+<head>
+  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eden Jewellery</title>
+  <title>oefening</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
   <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
   <!-- eigen geschreven css voor jouw html-bestand -->
-  <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- LEAFLET -->
+  <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+
+  <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+  <link rel="stylesheet" href="css/map.css">
+  <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+
+  <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+  <script defer src="js/mapScript.js"></script>
 
 </head>
 
@@ -25,61 +44,69 @@
 }
 </style>
 
-<body class="p-3 m-0 border-0 bd-example">
+<body  class="p-1 m- border-0 bd-example ">
     <nav class="navbar navbar-expand-md" style="background-color: black;">
-    <div class="container-fluid">
-      </a>
-      <img src="Eden_Jewellery_webtechnologie.png" alt="Logo width"120" height="100"> 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navabarSupportedConent" aria-controls="navabarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="Eden Juwellery">
-          <ul class="navbar-nav me-auto mb-2- mb-lg-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="Eden_Jewellery_webtechnologie.png" alt="EdenJewellery" width="100" height="100">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-1 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" style="color:gold" href="Index.html">Home</a>
+           <a class="nav-link" style="color:gold" href="Index.html">Home</a>
             </li>
-
+            <li class="nav-item">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" style="color:gold" href="Home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Overzicht 
+              <a class="nav-link dropdown-toggle" style="color: gold"href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Overzicht
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" style="color:gold"href="#">Ringen</a></li>
-                <li><a class="dropdown-item" style="color:gold"href="#">Oorbellen</a></li>
-                <li><a class="dropdown-item" style="color:gold" href="#">Armbanden</a></li>
-                <li><a class="dropdown-item" style="color:gold" href="#">Kettinginen </a></li>
-                <li><a class="dropdown-item" style="color: gold"  href="#">Hangers</a></li>
-                <li><a class="dropdown-item" style="color: gold" href="#">Informatie Diamanten</a></li>
+                <li><a class="dropdown-item" style="color:gold"href="Ringen.html">Ringen</a></li>
+                  <li><a class="dropdown-item" style="color:gold"href="Oorbellen.html">Oorbellen</a></li>
+                  <li><a class="dropdown-item" style="color:gold" href="Armbanden.html">Armbanden</a></li>
+                  <li><a class="dropdown-item" style="color:gold" href="Kettingen.html">Kettinginen </a></li>
+                  <li><a class="dropdown-item" style="color: gold"  href="Hangers.html">Hangers</a></li>
+                  <li><a class="dropdown-item" style="color: gold" href="Informatie Diamanten.html">Informatie Diamanten</a></li>
               </ul>
             </li>
             <li class="nav-item">
+              <a class="nav-link" style="color:gold"href="Contact.html">Contact</a>
             </li>
-            <li class="nav-item">
+            <li>
+              <a class="nav-link" style="color:gold"href="Sing in.html">Sing in</a>
             </li>
-            <a class="nav-link" style="color:gold"href="Contact.html">Contact</a>
-          </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="zoeken" aria-label="search">
-            <button class="btn btn-sm btn-outline-secondary" type="submit">zoeken</button>
-          </form>
-        </div>     
-    </div>
-  </nav>
+          </ul> 
+        </div>
+      </div>
+      </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <form class="d-flex" style="color: gold;" role="search">
+              <input class="form-control me-2" type="search" placeholder="zoeken" aria-label="Search">
+              <button class="btn btn-sm btn-outline-secondary" style="color: gold; "submit">zoeken</button>
+            </form>
+          </div>
+        </div>
+      </nav>
   
   <header class="row m-5">
-    <h1 class="col display-2 text-center">Contacteren</h1>
+    <h1 class="col display-2 ">Contacteren</h1>
   </header>
+  
   <a class="navbar-brand " href="#">
   <div class="container">
     <div class="row">
       <main class="col-md-9">
 
         <section id="map" class="row">
-          <!-- in de apMap zal er via Leaflet een map ingeladen worden -->
-          <div id="JewelleryMap" class="col-12 mb-3"></div>
+          <!-- in de JewelleryMap zal er via Leaflet een map ingeladen worden -->
+        <div id="JewelleryMap" class="col-12 mb-3"  style="height: 500px;"></div> 
         </section>
-
+        
           <section>
          <h2 class="text-uppercase fw-bolder"> Contacteren</h2>
          <p>Vul het registratieformulier in</p> 
@@ -89,12 +116,17 @@
 
         <form methode="post" action="#">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Naam<span>*</span></label>
-            <input type="Naam" class="form-control" id="exampleFormControlInput1" placeholder="Vul hier uw naam in">
+            <label for="exampleFormControlInput1" class="form-label">Voornaam<span>*</span></label>
+            <input type="Voornaam" class="form-control" id="exampleFormControlInput1" placeholder="Vul hier uw Voornaam in">
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-            </svg>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Achternaam<span>*</span></label>
+              <input type="Achternaam" class="form-control" id="exampleFormControlInput1" placeholder="Vul hier uw Achternaam in">
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+              </svg>
+              
             <label for="exampleFormControlInput1" class="form-label">E-mailadres<span>*</span></label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
           </div>
@@ -105,7 +137,7 @@
               <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
             </svg>
             <label for="exampleFormControlInput1" class="form-label">Telefoonnummer<span>*</span></label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0489 58 30 83">
+            <input type="number" class="form-control" id="exampleFormControlInput" placeholder="034 56 89 02">
             
           </div>
           <div class="mb-3">
@@ -122,21 +154,21 @@
           <input class="submit-button" type="submit">
           <hr>
 
-          <aside class="col-md-5">
-            <h2 class="text-uppercase fs-4 fw-bolder pt-3">Contacteren</h2>
+          <aside class="col-md-3 border-start ps-5">
+            <h2 class="text-uppercase fs-4 fw-bolder pt-3">contact</h2>
             <p>Eden Jewellery<br>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-              </svg>
-               <a E mail href= " Email Info@EdenJewellery.be">Info@EdenJewellery.be</a><br>
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" hight="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-              </svg>
-              Mobiel +32 489 /58 30 83</p>
+              Email <a href="mailto:mail@EdenJewellery.be">Info@EdenJewellery.be</a><br>
+              Adres <a href="">Pelikaanstraat 30, 2018 Antwerpen</a><br>
+              Phone <a href="">+32 123  54 78</a><br>
+            <ul class="list-inline socials">
+              <li class="list-inline-item">
+                <a href="https://www.youtube.com" target="_blank">
+                  <i class="bi bi-youtube koffiebruin fs-3"></i>
+                </a>
+              </li>
               <li class="list-inline-item">
                 <a href="https://www.instagram.com" target="_blank">
-                  <i class="bi bi-instagram  fs-3"></i>
+                  <i class="bi bi-instagram koffiebruin fs-3"></i>
                 </a>
               </li>
               <li class="list-inline-item">
@@ -145,12 +177,16 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://whatsapp.com/" target="_blank">
-                  <i class="bi bi-whatsapp fs-3"></i>
-                </form>   
-              </a>       
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="bi bi-twitter koffiebruin fs-3"></i>
+                </a>
+              </li>
+            </ul>
           </aside>
+          <hr>
   </div>
+
   <footer class="container-fluid text-center h6 small p-4">&copy; 2023 Eden Jewellery</footer>
+
 </body>
 </html> 
